@@ -1,0 +1,7 @@
+{
+	"dependencies": {
+		"@fal-ai/client": "^1.2.0",
+		"open": "^10.1.0"
+	},
+	"type": "module"
+}
