@@ -18,7 +18,7 @@ npm install
 node main.js
 ```
 
-## Bonus - You can add a seed in config.json :
+## Bonus - You can add a seed in config.json to get the same image every time
 
 ```json
 {
