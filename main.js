@@ -7,7 +7,7 @@ import fs from "fs/promises";
 	const input = JSON.parse(await fs.readFile("input.json", "utf-8"));
 
 	fal.config({
-		credentials: config.credentials,
+		credentials: config.FAL_API_KEY,
 	});
 
 	const result = await fal.subscribe("fal-ai/flux-lora", {

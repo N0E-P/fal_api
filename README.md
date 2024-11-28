@@ -1,37 +1,29 @@
-# download the packages
+# Flux LoRa API - Node.js Example
+
+Mostly to skip the safety checker
+
+## 1. Download the packages
 
 ```bash
-npm install open
-
-npm install --save @fal-ai/client
+npm install
 ```
 
-# replace the config.example.json and input.example.json with your own config and input
+## 2. Rename config.example.json and input.example.json by config.json and input.json
 
-```bash
-mv config.example.json config.json
+## 3. Fill in the config.json and input.json with your own values
 
-mv input.example.json input.json
-```
-
-# Fill in the config.json and input.json with your own values
-
-# run the code
+## 4. Run the code
 
 ```bash
 node main.js
 ```
 
-# Source
-
-https://fal.ai/models/fal-ai/flux-lora/api
-
-# Bonus
-
-You can add a seed in config.json :
+## Bonus - You can add a seed in config.json :
 
 ```json
 {
 	"seed": "your seed"
 }
 ```
+
+## [Source](https://fal.ai/models/fal-ai/flux-lora/api)
