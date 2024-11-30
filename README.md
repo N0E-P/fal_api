@@ -8,14 +8,20 @@ Mostly to skip the safety checker
 npm install
 ```
 
-## 2. Rename config.example.json and input.example.json by config.json and input.json
+## 2. Rename config.example.json, video_input.example.json and image_input.example.json by config.json, video_input.json and image_input.json
 
-## 3. Fill in the config.json and input.json with your own values
+## 3. Fill in the config.json, video_input.json and image_input.json with your own values
 
 ## 4. Run the code
 
 ```bash
-node main.js
+node image.js
+```
+
+OR
+
+```bash
+node video.js
 ```
 
 ## Bonus - You can add a seed in config.json to get the same image every time
@@ -26,4 +32,6 @@ node main.js
 }
 ```
 
-## [Source](https://fal.ai/models/fal-ai/flux-lora/api)
+## [Source Image](https://fal.ai/models/fal-ai/flux-lora/api)
+
+## [Source Video](https://fal.ai/models/fal-ai/kling-video/v1/standard/image-to-video/api?platform=js)

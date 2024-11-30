@@ -1,4 +1,4 @@
-# Input value variables
+# Image input variables
 
 ## prompt
 

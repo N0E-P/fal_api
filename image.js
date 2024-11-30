@@ -4,7 +4,7 @@ import fs from "fs/promises";
 
 (async () => {
 	const config = JSON.parse(await fs.readFile("config.json", "utf-8"));
-	const input = JSON.parse(await fs.readFile("input.json", "utf-8"));
+	const input = JSON.parse(await fs.readFile("image_input.json", "utf-8"));
 
 	fal.config({
 		credentials: config.FAL_API_KEY,
