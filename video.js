@@ -19,10 +19,11 @@ import fs from "fs/promises";
 			}
 		},
 	});
-	console.log(result.data);
-	console.log(result.requestId);
+	// console.log(result.data);
+	// console.log(result.requestId);
 
 	if (result.data.video && result.data.video.url) {
+		console.log(result.data.video.url);
 		const videoUrl = result.data.video.url;
 		await open(videoUrl);
 	}

@@ -23,6 +23,7 @@ import fs from "fs/promises";
 	//console.log(result.requestId);
 
 	if (result.data.images && result.data.images.length > 0) {
+		console.log(result.data.images[0].url);
 		const imageUrl = result.data.images[0].url;
 		await open(imageUrl);
 	}
