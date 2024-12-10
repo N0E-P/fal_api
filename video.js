@@ -27,19 +27,18 @@ import download from "image-downloader";
 		console.log(url);
 
 		// Open the video in the browser and download it
-		await open(url);
+		//await open(url);
 		download
 			.image({
 				url: url,
 				dest: `../../output/${name}.mp4`,
 			})
 			.then(({ filename }) => {
-				console.log("Saved to output!");
+				//Create a Date.now().txt file with the URL
+				fs.writeFile(`./output/${name}.txt`, url);
+				console.log("Saved to /output!");
 			})
 			.catch((err) => console.error(err));
-
-		//Create a Date.now().txt file with the URL
-		fs.writeFile(`./output/${name}.txt`, url);
 	} else {
 		console.log("No video found");
 		console.log(result.data);
