@@ -22,18 +22,18 @@ import download from "image-downloader";
 	});
 
 	if (result.data.images && result.data.images.length > 0) {
-		const imageUrl = result.data.images[0].url;
-		console.log(imageUrl);
+		const url = result.data.images[0].url;
+		console.log(url);
 
 		// Open the image in the browser and download it
-		await open(imageUrl);
+		await open(url);
 		download
 			.image({
-				url: imageUrl,
-				dest: "../../output",
+				url: url,
+				dest: `../../output/${Date.now()}.jpg`,
 			})
 			.then(({ filename }) => {
-				console.log("Saved to", filename);
+				console.log("Saved to output!");
 			})
 			.catch((err) => console.error(err));
 	} else {

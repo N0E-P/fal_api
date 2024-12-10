@@ -1,6 +1,7 @@
 import { fal } from "@fal-ai/client";
 import open from "open";
 import fs from "fs/promises";
+import download from "image-downloader";
 
 (async () => {
 	const config = JSON.parse(await fs.readFile("config.json", "utf-8"));
@@ -21,11 +22,20 @@ import fs from "fs/promises";
 	});
 
 	if (result.data.video && result.data.video.url) {
-		const videoUrl = result.data.video.url;
-		console.log(videoUrl);
+		const url = result.data.video.url;
+		console.log(url);
 
-		// Open the video in the browser
-		await open(videoUrl);
+		// Open the video in the browser and download it
+		await open(url);
+		download
+			.image({
+				url: url,
+				dest: `../../output/${Date.now()}.mp4`,
+			})
+			.then(({ filename }) => {
+				console.log("Saved to output!");
+			})
+			.catch((err) => console.error(err));
 	} else {
 		console.log("No video found");
 		console.log(result.data);
