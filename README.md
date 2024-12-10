@@ -24,6 +24,26 @@ OR
 node video.js
 ```
 
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
 # Image Input Variables
 
 [Source](https://fal.ai/models/fal-ai/flux-lora/api)
@@ -122,6 +142,26 @@ Possible enum values: jpeg, png
 	"seed": "your seed"
 }
 ```
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
 
 # Video input variables
 
