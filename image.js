@@ -4,13 +4,13 @@ import fs from "fs/promises";
 import download from "image-downloader";
 
 (async () => {
-	const config = JSON.parse(await fs.readFile("config.json", "utf-8"));
 	const input = JSON.parse(await fs.readFile("image_input.json", "utf-8"));
-
+	const config = JSON.parse(await fs.readFile("config.json", "utf-8"));
 	fal.config({
 		credentials: config.FAL_API_KEY,
 	});
 
+	// Subscribe to the FAL AI service
 	const result = await fal.subscribe("fal-ai/flux-lora", {
 		input,
 		logs: true,
@@ -21,24 +21,33 @@ import download from "image-downloader";
 		},
 	});
 
+	// Check if the result has an image
 	if (result.data.images && result.data.images.length > 0) {
 		const url = result.data.images[0].url;
-		const name = Date.now();
 		console.log(url);
 
-		// Open the image in the browser and download it
-		//await open(url);
-		download
-			.image({
-				url: url,
-				dest: `../../output/${name}.jpg`,
-			})
-			.then(({ filename }) => {
-				//Create a Date.now().txt file with the URL
-				fs.writeFile(`./output/${name}.txt`, url);
-				console.log("Saved to /output!");
-			})
-			.catch((err) => console.error(err));
+		// Open the image in the browser
+		if (config.OPEN_BROWSER) {
+			await open(url);
+		}
+
+		// Download the image
+		if (config.DOWNLOAD) {
+			const outputPath = config.OUTPUT_PATH || "./";
+			const name = Date.now();
+
+			// Download the image and save it to the output folder and save the URL to a text file
+			download
+				.image({
+					url: url,
+					dest: `../../${outputPath + name}.jpg`,
+				})
+				.then(({ filename }) => {
+					fs.writeFile(`${outputPath + name}.txt`, url);
+					console.log("Saved!");
+				})
+				.catch((err) => console.error(err));
+		}
 	} else {
 		console.log("No image found");
 		console.log(result.data);

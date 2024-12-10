@@ -1,3 +1,6 @@
 {
-	"FAL_API_KEY": "blablabla"
+	"FAL_API_KEY": "blablabla",
+	"DOWNLOAD": true,
+	"OUTPUT_PATH": "./",
+	"OPEN_BROWSER": true
 }

@@ -10,9 +10,9 @@ npm install
 
 ## 3. Fill in the config.json, video_input.json and image_input.json with your own values
 
-## 4. Create a folder named "output" in the root directory
+More details about the config variables and image/video input variables can be found below.
 
-## 5. Run the code
+## 4. Run the code
 
 ```bash
 node image.js
@@ -22,6 +22,63 @@ OR
 
 ```bash
 node video.js
+```
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+# Config Variables
+
+## FAL_API_KEY
+
+(string)
+
+Your API key for the Fal API.
+
+## DOWNLOAD
+
+(boolean)
+
+If set to true, the generated image or video will be downloaded to the OUTPUT_PATH. Default value: true
+
+## OUTPUT_PATH
+
+(string)
+
+The path where the generated image or video will be saved.
+
+## OPEN_BROWSER
+
+(boolean)
+
+If set to true, the generated image or video will be opened in the default browser. Default value: true
+
+## Example
+
+```json
+{
+	"FAL_API_KEY": "682258328623826858",
+	"OUTPUT_PATH": "../output/",
+	"DOWNLOAD": true,
+	"OPEN_BROWSER": false
+}
 ```
 
 ---
@@ -131,14 +188,7 @@ Possible enum values: jpeg, png
 	"guidance_scale": 3.5,
 	"num_images": 1,
 	"enable_safety_checker": true,
-	"output_format": "jpeg"
-}
-```
-
-## Bonus - You can add a seed in config.json to get the same image every time
-
-```json
-{
+	"output_format": "jpeg",
 	"seed": "your seed"
 }
 ```
