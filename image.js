@@ -1,6 +1,7 @@
 import { fal } from "@fal-ai/client";
 import open from "open";
 import fs from "fs/promises";
+import download from "image-downloader";
 
 (async () => {
 	const config = JSON.parse(await fs.readFile("config.json", "utf-8"));
@@ -19,12 +20,25 @@ import fs from "fs/promises";
 			}
 		},
 	});
-	//console.log(result.data);
-	//console.log(result.requestId);
 
 	if (result.data.images && result.data.images.length > 0) {
-		console.log(result.data.images[0].url);
 		const imageUrl = result.data.images[0].url;
+		console.log(imageUrl);
+
+		// Open the image in the browser and download it
 		await open(imageUrl);
+		download
+			.image({
+				url: imageUrl,
+				dest: "../../output",
+			})
+			.then(({ filename }) => {
+				console.log("Saved to", filename);
+			})
+			.catch((err) => console.error(err));
+	} else {
+		console.log("No image found");
+		console.log(result.data);
+		console.log(result.requestId);
 	}
 })();
