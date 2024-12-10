@@ -6,7 +6,7 @@
 npm install
 ```
 
-## 2. Rename config.example.json to config.json
+## 2. Rename config.example.json, image_input.example.json and video_input.example.json to config.json, image_input.json and video_input.json respectively
 
 ## 3. Fill in the config.json, video_input.json and image_input.json with your own values
 
