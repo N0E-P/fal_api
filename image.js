@@ -16,7 +16,7 @@ import download from "image-downloader";
 		logs: true,
 		onQueueUpdate: (update) => {
 			if (update.status === "IN_PROGRESS") {
-				update.logs.map((log) => log.message).forEach(console.log);
+				//update.logs.map((log) => log.message).forEach(console.log);
 			}
 		},
 	});
@@ -31,12 +31,10 @@ import download from "image-downloader";
 			await open(url);
 		}
 
-		// Download the image
+		// Download the image and save the URL to a text file
 		if (config.DOWNLOAD) {
 			const outputPath = config.OUTPUT_PATH || "./";
 			const name = Date.now();
-
-			// Download the image and save it to the output folder and save the URL to a text file
 			download
 				.image({
 					url: url,
@@ -44,7 +42,7 @@ import download from "image-downloader";
 				})
 				.then(({ filename }) => {
 					fs.writeFile(`${outputPath + name}.txt`, url);
-					console.log("Saved!");
+					console.log("Image saved!");
 				})
 				.catch((err) => console.error(err));
 		}
