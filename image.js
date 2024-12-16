@@ -38,7 +38,7 @@ import download from "image-downloader";
 			download
 				.image({
 					url: url,
-					dest: `../../${outputPath + name}.jpg`,
+					dest: `../../${outputPath + name}.png`,
 				})
 				.then(({ filename }) => {
 					fs.writeFile(`${outputPath + name}.txt`, url);

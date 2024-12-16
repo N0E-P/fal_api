@@ -13,5 +13,5 @@
 	"guidance_scale": 3.5,
 	"num_images": 1,
 	"enable_safety_checker": false,
-	"output_format": "jpeg"
+	"output_format": "png"
 }
