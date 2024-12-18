@@ -37,11 +37,14 @@ import download from "image-downloader";
 			const name = Date.now();
 			download
 				.image({
-					url: url,
+					url,
 					dest: `../../${outputPath + name}.mp4`,
 				})
 				.then(({ filename }) => {
-					fs.writeFile(`${outputPath + name}.txt`, url);
+					fs.writeFile(
+						`${outputPath + name}.txt`,
+						JSON.stringify(result.data, null, "\t")
+					);
 					console.log("Video saved!");
 				})
 				.catch((err) => console.error(err));
