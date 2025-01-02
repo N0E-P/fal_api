@@ -21,33 +21,34 @@ import download from "image-downloader";
 		},
 	});
 
-	// Check if the result has an image
+	// Open every images in the browser and/or download them to the output path
 	if (result.data.images && result.data.images.length > 0) {
-		const url = result.data.images[0].url;
-		console.log(url);
+		for (const image of result.data.images) {
+			console.log(image.url);
 
-		// Open the image in the browser
-		if (config.OPEN_BROWSER) {
-			await open(url);
-		}
+			// Open the image in the browser
+			if (config.OPEN_BROWSER) {
+				await open(image.url);
+			}
 
-		// Download the image and save the URL to a text file
-		if (config.DOWNLOAD) {
-			const outputPath = config.OUTPUT_PATH || "./";
-			const name = Date.now();
-			download
-				.image({
-					url,
-					dest: `../../${outputPath + name}.png`,
-				})
-				.then(({ filename }) => {
-					fs.writeFile(
-						`${outputPath + name}.txt`,
-						JSON.stringify(result.data, null, "\t")
-					);
-					console.log("Image saved!");
-				})
-				.catch((err) => console.error(err));
+			// Download the image and save the URL to a text file
+			if (config.DOWNLOAD) {
+				const outputPath = config.OUTPUT_PATH || "./";
+				const name = Date.now();
+				download
+					.image({
+						url: image.url,
+						dest: `../../${outputPath + name}.png`,
+					})
+					.then(({ filename }) => {
+						fs.writeFile(
+							`${outputPath + name}.txt`,
+							JSON.stringify(result.data, null, "\t")
+						);
+						console.log("Image saved!");
+					})
+					.catch((err) => console.error(err));
+			}
 		}
 	} else {
 		console.log("No image found");
