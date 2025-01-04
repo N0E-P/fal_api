@@ -4,7 +4,7 @@ import fs from "fs/promises";
 import download from "image-downloader";
 
 // Image function
-async function image({ model_name, input_file_name }) {
+async function image(model_name, input_file_name) {
 	const input = JSON.parse(await fs.readFile(input_file_name, "utf-8"));
 	const config = JSON.parse(await fs.readFile("config.json", "utf-8"));
 	fal.config({
@@ -59,15 +59,15 @@ async function image({ model_name, input_file_name }) {
 }
 
 // Video function
-async function video() {
-	const input = JSON.parse(await fs.readFile("input_video-kling.json", "utf-8"));
+async function video(model_name, input_file_name) {
+	const input = JSON.parse(await fs.readFile(input_file_name, "utf-8"));
 	const config = JSON.parse(await fs.readFile("config.json", "utf-8"));
 	fal.config({
 		credentials: config.FAL_API_KEY,
 	});
 
 	// Subscribe to the FAL AI service
-	const result = await fal.subscribe("fal-ai/kling-video/v1.5/pro/image-to-video", {
+	const result = await fal.subscribe(model_name, {
 		input,
 		logs: true,
 		onQueueUpdate: (update) => {
@@ -114,17 +114,10 @@ async function video() {
 
 //  Main function, check the arguments and call the corresponding function
 const args = process.argv[2];
-if (args === "image-flux") {
-	image({ model_name: "fal-ai/flux-lora", input_file_name: "input_image-flux.json" });
-} else if (args === "image-sd") {
-	image({ model_name: "fal-ai/lora", input_file_name: "input_image-sd.json" });
-} else if (args === "image-sdxl") {
-	image({ model_name: "fal-ai/lora", input_file_name: "input_image-sdxl.json" });
-} else if (args === "image-huggingface") {
-	image({ model_name: "fal-ai/lora", input_file_name: "input_image-huggingface.json" });
-} else if (args === "video-kling") {
-	video();
-} else {
-	console.error("Invalid arguments, read the fucking README.md file.");
-	process.exit(1);
-}
+if (args === "image-flux-1,0d") image("fal-ai/flux-lora", "input_image-flux-1,0d.json");
+else if (args === "image-sd-1,5") image("fal-ai/lora", "input_image-sd-1,5.json");
+else if (args === "image-sdxl-1,0") image("fal-ai/lora", "input_image-sdxl-1,0.json");
+else if (args === "image-huggingface-2,0") image("fal-ai/lora", "input_image-huggingface-2,0.json");
+else if (args === "video-kling-1,5pro")
+	video("fal-ai/kling-video/v1.5/pro/image-to-video", "input_video-kling-1,5pro.json");
+else console.error("Invalid arguments, read the fucking README.md file.");

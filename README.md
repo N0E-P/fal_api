@@ -17,31 +17,31 @@ More details to fill these files can be found below.
 ## 4. Run the code
 
 ```bash
-npm run start -- image-flux
+npm run start -- image-flux-1,0d
 ```
 
 OR
 
 ```bash
-npm run start -- image-sd
+npm run start -- image-sd-1,5
 ```
 
 OR
 
 ```bash
-npm run start -- image-sdxl
+npm run start -- image-sdxl-1,0
 ```
 
 OR
 
 ```bash
-npm run start -- image-huggingface
+npm run start -- image-huggingface-2,0
 ```
 
 OR
 
 ```bash
-npm run start -- video-kling
+npm run start -- video-kling-1,5pro
 ```
 
 ---
