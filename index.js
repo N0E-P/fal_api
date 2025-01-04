@@ -95,11 +95,11 @@ async function request(model_name, input_file_name) {
 
 //  Main function, check the arguments and call the corresponding function
 const args = process.argv[2];
-if (args === "image-flux-1,0d") request("fal-ai/flux-lora", "input_image-flux-1,0d.json");
-else if (args === "image-sd-1,5") request("fal-ai/lora", "input_image-sd-1,5.json");
-else if (args === "image-sdxl-1,0") request("fal-ai/lora", "input_image-sdxl-1,0.json");
-else if (args === "image-huggingface-2,0")
+if (args === "image-flux") request("fal-ai/flux-lora", "input_image-flux-1,0d.json");
+else if (args === "image-sd") request("fal-ai/lora", "input_image-sd-1,5.json");
+else if (args === "image-sdxl") request("fal-ai/lora", "input_image-sdxl-1,0.json");
+else if (args === "image-huggingface")
 	request("fal-ai/lora", "input_image-huggingface-2,0.json");
-else if (args === "video-kling-1,5pro")
+else if (args === "video-kling")
 	request("fal-ai/kling-video/v1.5/pro/image-to-video", "input_video-kling-1,5pro.json");
 else console.error("Invalid arguments, read the fucking README.md file.");
