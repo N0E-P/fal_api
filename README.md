@@ -6,7 +6,7 @@
 npm install
 ```
 
-## 2. Rename config.example.json to config.json and fill in the API key value
+## 2. Rename config.example.json to config.json and fill in the values
 
 More details to fill the file can be found below.
 

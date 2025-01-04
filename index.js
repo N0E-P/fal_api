@@ -114,16 +114,17 @@ async function video() {
 
 //  Main function, check the arguments and call the corresponding function
 const args = process.argv[2];
-if (args === "image-flux")
+if (args === "image-flux") {
 	image({ model_name: "fal-ai/flux-lora", input_file_name: "input_image-flux.json" });
-else if (args === "image-sd")
+} else if (args === "image-sd") {
 	image({ model_name: "fal-ai/lora", input_file_name: "input_image-sd.json" });
-else if (args === "image-sdxl")
+} else if (args === "image-sdxl") {
 	image({ model_name: "fal-ai/lora", input_file_name: "input_image-sdxl.json" });
-else if (args === "image-huggingface")
+} else if (args === "image-huggingface") {
 	image({ model_name: "fal-ai/lora", input_file_name: "input_image-huggingface.json" });
-else if (args === "video-kling") video();
-else {
+} else if (args === "video-kling") {
+	video();
+} else {
 	console.error("Invalid arguments, read the fucking README.md file.");
 	process.exit(1);
 }
