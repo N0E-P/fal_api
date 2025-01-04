@@ -1,4 +1,4 @@
-# Flux LoRa API - Node.js Example
+# Run FLUX, Stable Diffusion and Kling APIs from Fal.ai using Node.js
 
 ## 1. Download the packages
 
@@ -6,22 +6,30 @@
 npm install
 ```
 
-## 2. Rename config.example.json, image_input.example.json and video_input.example.json to config.json, image_input.json and video_input.json respectively
+## 2. Rename config.example.json to config.json and fill in the API key value
 
-## 3. Fill in the config.json, video_input.json and image_input.json with your own values
+More details can be found below.
 
-More details about the config variables and image/video input variables can be found below.
+## 3. Fill in the input files for the models you want to run
+
+More details can be found below.
 
 ## 4. Run the code
 
 ```bash
-node image.js
+npm run start -- image-flux
 ```
 
 OR
 
 ```bash
-node video.js
+npm run start -- image-sd
+```
+
+OR
+
+```bash
+npm run start -- video-kling
 ```
 
 ---
@@ -101,7 +109,7 @@ If set to true, the generated image or video will be opened in the default brows
 
 ---
 
-# Image Input Variables
+# FLUX Image Input Variables
 
 [Source](https://fal.ai/models/fal-ai/flux-lora/api)
 
@@ -193,6 +201,308 @@ Possible enum values: jpeg, png
 }
 ```
 
+```json
+{
+	"prompt": "",
+	"loras": [
+		{
+			"name": "",
+			"path": "",
+			"scale": 1
+		}
+	],
+	"notUsedLora": [],
+	"image_size": "portrait_16_9",
+	"num_inference_steps": 28,
+	"guidance_scale": 3.5,
+	"num_images": 1,
+	"enable_safety_checker": false,
+	"output_format": "png"
+}
+```
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+# Stable diffusion Image Input Variables
+
+[Source](https://fal.ai/models/fal-ai/lora/api#schema-input)
+
+## model_name
+
+(string)
+
+URL or HuggingFace ID of the base model to generate the image.
+
+## unet_name
+
+(string)
+
+URL or HuggingFace ID of the custom U-Net model to use for the image generation.
+
+## variant
+
+(string)
+
+The variant of the model to use for huggingface models, e.g. 'fp16'.
+
+## prompt
+
+(string)
+
+The prompt to use for generating the image. Be as descriptive as possible for best results.
+
+## negative_prompt
+
+(string)
+
+The negative prompt to use.Use it to address details that you don't want in the image. This could be colors, objects, scenery and even the small details (e.g. moustache, blurry, low resolution). Default value: ""
+
+## prompt_weighting
+
+(boolean)
+
+If set to true, the prompt weighting syntax will be used. Additionally, this will lift the 77 token limit by averaging embeddings.
+
+## loras
+
+(list<LoraWeight>)
+
+The LoRAs to use for the image generation. You can use any number of LoRAs and they will be merged together to generate the final image. Default value: ``
+
+## embeddings
+
+(list<Embedding>)
+
+The embeddings to use for the image generation. Only a single embedding is supported at the moment. The embeddings will be used to map the tokens in the prompt to the embedding weights. Default value: ``
+
+## controlnets
+
+(list<ControlNet>)
+
+The control nets to use for the image generation. You can use any number of control nets and they will be applied to the image at the specified timesteps. Default value: ``
+
+## controlnet_guess_mode (boolean)
+
+If set to true, the controlnet will be applied to only the conditional predictions.
+
+## ip_adapter
+
+(list<IPAdapter>)
+
+The IP adapter to use for the image generation. Default value: ``
+
+## image_encoder_path
+
+(string)
+
+The path to the image encoder model to use for the image generation.
+
+## image_encoder_subfolder
+
+(string)
+
+The subfolder of the image encoder model to use for the image generation.
+
+## image_encoder_weight_name
+
+(string)
+
+The weight name of the image encoder model to use for the image generation. Default value: "pytorch_model.bin"
+
+## ic_light_model_url
+
+(string)
+
+The URL of the IC Light model to use for the image generation.
+
+## ic_light_model_background_image_url
+
+(string)
+
+The URL of the IC Light model background image to use for the image generation. Make sure to use a background compatible with the model.
+
+## ic_light_image_url
+
+(string)
+
+The URL of the IC Light model image to use for the image generation.
+
+## seed
+
+(integer)
+
+The same seed and the same prompt given to the same version of Stable Diffusion will output the same image every time.
+
+## image_size
+
+(ImageSize | Enum)
+
+The size of the generated image. You can choose between some presets or custom height and width that must be multiples of 8. Default value: square_hd
+
+Possible enum values: square_hd, square, portrait_4_3, portrait_16_9, landscape_4_3, landscape_16_9
+
+Note: For custom image sizes, you can pass the width and height as an object:
+
+```json
+{
+	"image_size": {
+		"width": 1280,
+		"height": 720
+	}
+}
+```
+
+## num_inference_steps
+
+(integer)
+
+Increasing the amount of steps tells Stable Diffusion that it should take more steps to generate your final result which can increase the amount of detail in your image. Default value: 30
+
+## guidance_scale
+
+(float)
+
+The CFG (Classifier Free Guidance) scale is a measure of how close you want the model to stick to your prompt when looking for a related image to show you. Default value: 7.5
+
+## clip_skip
+
+(integer)
+
+Skips part of the image generation process, leading to slightly different results. This means the image renders faster, too.
+
+## scheduler
+
+(SchedulerEnum)
+
+Scheduler / sampler to use for the image denoising process.
+
+Possible enum values: DPM++ 2M, DPM++ 2M Karras, DPM++ 2M SDE, DPM++ 2M SDE Karras, Euler, Euler A, Euler (trailing timesteps), LCM, LCM (trailing timesteps), DDIM, TCD
+
+## timesteps
+
+(TimestepsInput)
+
+Optionally override the timesteps to use for the denoising process. Only works with schedulers which support the timesteps argument in their set_timesteps method. Defaults to not overriding, in which case the scheduler automatically sets the timesteps based on the num_inference_steps parameter. If set to a custom timestep schedule, the num_inference_steps parameter will be ignored. Cannot be set if sigmas is set. Default value: [object Object]
+
+## sigmas
+
+(SigmasInput)
+
+Optionally override the sigmas to use for the denoising process. Only works with schedulers which support the sigmas argument in their set_sigmas method. Defaults to not overriding, in which case the scheduler automatically sets the sigmas based on the num_inference_steps parameter. If set to a custom sigma schedule, the num_inference_steps parameter will be ignored. Cannot be set if timesteps is set. Default value: [object Object]
+
+## image_format
+
+(ImageFormatEnum)
+
+The format of the generated image. Default value: "png"
+
+Possible enum values: jpeg, png
+
+## num_images
+
+(integer)
+
+Number of images to generate in one request. Note that the higher the batch size, the longer it will take to generate the images. Default value: 1
+
+## enable_safety_checker
+
+(boolean)
+
+If set to true, the safety checker will be enabled.
+
+## tile_width
+
+(integer)
+
+The size of the tiles to be used for the image generation. Default value: 4096
+
+## tile_height
+
+(integer)
+
+The size of the tiles to be used for the image generation. Default value: 4096
+
+## tile_stride_width
+
+(integer)
+
+The stride of the tiles to be used for the image generation. Default value: 2048
+
+## tile_stride_height
+
+(integer)
+
+The stride of the tiles to be used for the image generation. Default value: 2048
+
+## eta
+
+(float)
+
+The eta value to be used for the image generation.
+
+## debug_latents
+
+(boolean)
+
+If set to true, the latents will be saved for debugging.
+
+## debug_per_pass_latents
+
+(boolean)
+
+If set to true, the latents will be saved for debugging per pass.
+
+## Example
+
+```json
+{
+	"model_name": "stabilityai/stable-diffusion-xl-base-1.0",
+	"prompt": "Photo of a european medieval 40 year old queen, silver hair, highly detailed face, detailed eyes, head shot, intricate crown, age spots, wrinkles",
+	"negative_prompt": "cartoon, painting, illustration, worst quality, low quality, normal quality",
+	"prompt_weighting": true,
+	"loras": [],
+	"embeddings": [],
+	"controlnets": [],
+	"ip_adapter": [],
+	"image_encoder_weight_name": "pytorch_model.bin",
+	"image_size": "square_hd",
+	"num_inference_steps": 30,
+	"guidance_scale": 7.5,
+	"timesteps": {
+		"method": "default",
+		"array": []
+	},
+	"sigmas": {
+		"method": "default",
+		"array": []
+	},
+	"image_format": "jpeg",
+	"num_images": 1,
+	"tile_width": 4096,
+	"tile_height": 4096,
+	"tile_stride_width": 2048,
+	"tile_stride_height": 2048
+}
+```
+
 ---
 
 ---
@@ -241,9 +551,20 @@ Possible enum values: 16:9, 9:16, 1:1
 
 ## Example
 
+```json
 {
-"prompt": "A stylish woman walks down a Tokyo street filled with warm glowing neon and animated city signage. She wears a black leather jacket, a long red dress, and black boots, and carries a black purse.",
-"image_url": "https://fal.media/files/panda/TuXlMwArpQcdYNCLAEM8K.webp",
-"duration": "5",
-"aspect_ratio": "16:9"
+	"prompt": "A stylish woman walks down a Tokyo street filled with warm glowing neon and animated city signage. She wears a black leather jacket, a long red dress, and black boots, and carries a black purse.",
+	"image_url": "https://fal.media/files/panda/TuXlMwArpQcdYNCLAEM8K.webp",
+	"duration": "5",
+	"aspect_ratio": "16:9"
 }
+```
+
+```json
+{
+	"prompt": "",
+	"image_url": "",
+	"duration": "10",
+	"aspect_ratio": "9:16"
+}
+```

@@ -4,5 +4,8 @@
 		"image-downloader": "^4.3.0",
 		"open": "^10.1.0"
 	},
-	"type": "module"
+	"type": "module",
+	"scripts": {
+		"start": "node index.js"
+	}
 }

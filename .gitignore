@@ -1,5 +1,4 @@
 /config.json
 /node_modules
 /output
-/image_input.json
-/video_input.json
+/notes.json

@@ -1,13 +1,6 @@
 {
 	"prompt": "",
-	"loras": [
-		{
-			"name": "",
-			"path": "",
-			"scale": 1
-		}
-	],
-	"notUsedLora": [],
+	"loras": [],
 	"image_size": "portrait_16_9",
 	"num_inference_steps": 28,
 	"guidance_scale": 3.5,
