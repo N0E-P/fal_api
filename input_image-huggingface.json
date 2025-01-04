@@ -1,5 +1,5 @@
 {
-	"model_name": "runwayml/stable-diffusion-v1-5",
+	"model_name": "SG161222/Realistic_Vision_V2.0",
 	"prompt": "",
 	"negative_prompt": "",
 	"prompt_weighting": true,

@@ -8,11 +8,11 @@ npm install
 
 ## 2. Rename config.example.json to config.json and fill in the API key value
 
-More details can be found below.
+More details to fill the file can be found below.
 
 ## 3. Fill in the input files for the models you want to run
 
-More details can be found below.
+More details to fill these files can be found below.
 
 ## 4. Run the code
 
@@ -24,6 +24,18 @@ OR
 
 ```bash
 npm run start -- image-sd
+```
+
+OR
+
+```bash
+npm run start -- image-sdxl
+```
+
+OR
+
+```bash
+npm run start -- image-huggingface
 ```
 
 OR
@@ -495,6 +507,37 @@ If set to true, the latents will be saved for debugging per pass.
 		"array": []
 	},
 	"image_format": "jpeg",
+	"num_images": 1,
+	"tile_width": 4096,
+	"tile_height": 4096,
+	"tile_stride_width": 2048,
+	"tile_stride_height": 2048
+}
+```
+
+```json
+{
+	"model_name": "stabilityai/stable-diffusion-xl-base-1.0",
+	"prompt": "",
+	"negative_prompt": "",
+	"prompt_weighting": true,
+	"loras": [],
+	"embeddings": [],
+	"controlnets": [],
+	"ip_adapter": [],
+	"image_encoder_weight_name": "pytorch_model.bin",
+	"image_size": "portrait_16_9",
+	"num_inference_steps": 30,
+	"guidance_scale": 7.5,
+	"timesteps": {
+		"method": "default",
+		"array": []
+	},
+	"sigmas": {
+		"method": "default",
+		"array": []
+	},
+	"image_format": "png",
 	"num_images": 1,
 	"tile_width": 4096,
 	"tile_height": 4096,
