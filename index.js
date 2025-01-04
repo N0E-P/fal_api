@@ -3,8 +3,8 @@ import open from "open";
 import fs from "fs/promises";
 import download from "image-downloader";
 
-// Image function
-async function image(model_name, input_file_name) {
+// Make a request to the fal.ai API
+async function request(model_name, input_file_name) {
 	const input = JSON.parse(await fs.readFile(input_file_name, "utf-8"));
 	const config = JSON.parse(await fs.readFile("config.json", "utf-8"));
 	fal.config({
@@ -32,7 +32,7 @@ async function image(model_name, input_file_name) {
 				await open(image.url);
 			}
 
-			// Download the image and save the URL to a text file
+			// Download the image and save the data to a text file
 			if (config.DOWNLOAD) {
 				const outputPath = config.OUTPUT_PATH || "./";
 				const name = Date.now();
@@ -44,41 +44,18 @@ async function image(model_name, input_file_name) {
 					.then(({ filename }) => {
 						fs.writeFile(
 							`${outputPath + name}.txt`,
-							JSON.stringify(result.data, null, "\t")
+							JSON.stringify(result.data, null, "\t") +
+								"\n\n" +
+								JSON.stringify(input, null, "\t")
 						);
 						console.log("Image saved!");
 					})
 					.catch((err) => console.error(err));
 			}
 		}
-	} else {
-		console.log("No image found");
-		console.log(result.data);
-		console.log(result.requestId);
-	}
-}
 
-// Video function
-async function video(model_name, input_file_name) {
-	const input = JSON.parse(await fs.readFile(input_file_name, "utf-8"));
-	const config = JSON.parse(await fs.readFile("config.json", "utf-8"));
-	fal.config({
-		credentials: config.FAL_API_KEY,
-	});
-
-	// Subscribe to the FAL AI service
-	const result = await fal.subscribe(model_name, {
-		input,
-		logs: true,
-		onQueueUpdate: (update) => {
-			if (update.status === "IN_PROGRESS") {
-				//update.logs.map((log) => log.message).forEach(console.log);
-			}
-		},
-	});
-
-	// Check if the result has a video
-	if (result.data.video && result.data.video.url) {
+		// Open the video in the browser and/or download it to the output path
+	} else if (result.data.video && result.data.video.url) {
 		const url = result.data.video.url;
 		console.log(url);
 
@@ -99,14 +76,18 @@ async function video(model_name, input_file_name) {
 				.then(({ filename }) => {
 					fs.writeFile(
 						`${outputPath + name}.txt`,
-						JSON.stringify(result.data, null, "\t")
+						JSON.stringify(result.data, null, "\t") +
+							"\n\n" +
+							JSON.stringify(input, null, "\t")
 					);
 					console.log("Video saved!");
 				})
 				.catch((err) => console.error(err));
 		}
+
+		//Nothing has been found
 	} else {
-		console.log("No video found");
+		console.log("No image or video found");
 		console.log(result.data);
 		console.log(result.requestId);
 	}
@@ -114,10 +95,11 @@ async function video(model_name, input_file_name) {
 
 //  Main function, check the arguments and call the corresponding function
 const args = process.argv[2];
-if (args === "image-flux-1,0d") image("fal-ai/flux-lora", "input_image-flux-1,0d.json");
-else if (args === "image-sd-1,5") image("fal-ai/lora", "input_image-sd-1,5.json");
-else if (args === "image-sdxl-1,0") image("fal-ai/lora", "input_image-sdxl-1,0.json");
-else if (args === "image-huggingface-2,0") image("fal-ai/lora", "input_image-huggingface-2,0.json");
+if (args === "image-flux-1,0d") request("fal-ai/flux-lora", "input_image-flux-1,0d.json");
+else if (args === "image-sd-1,5") request("fal-ai/lora", "input_image-sd-1,5.json");
+else if (args === "image-sdxl-1,0") request("fal-ai/lora", "input_image-sdxl-1,0.json");
+else if (args === "image-huggingface-2,0")
+	request("fal-ai/lora", "input_image-huggingface-2,0.json");
 else if (args === "video-kling-1,5pro")
-	video("fal-ai/kling-video/v1.5/pro/image-to-video", "input_video-kling-1,5pro.json");
+	request("fal-ai/kling-video/v1.5/pro/image-to-video", "input_video-kling-1,5pro.json");
 else console.error("Invalid arguments, read the fucking README.md file.");
