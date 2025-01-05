@@ -174,6 +174,29 @@
 			"scale": 1,
 			"link": "https://civitai.com/models/61099?modelVersionId=721167",
 			"trigger_words": "busty breasts, nipples, anime, anime style, massively huge breasts"
+		},
+		{
+			"name": "handwritten",
+			"path": "https://civitai.com/api/download/models/1163532?type=Model&format=SafeTensor",
+			"scale": 1
+		},
+		{
+			"name": "reddit amateur nude",
+			"path": "https://civitai.com/api/download/models/1014698?type=Model&format=SafeTensor",
+			"scale": 0.9,
+			"trigger_words": "reddit_nude"
+		},
+		{
+			"name": "busty breast",
+			"path": "https://civitai.com/api/download/models/723657?type=Model&format=SafeTensor",
+			"scale": 0.7,
+			"trigger_words": "busty breast, boobs, nipples"
+		},
+		{
+			"name": "instagram S3LFI3",
+			"path": "https://civitai.com/api/download/models/860811?type=Model&format=SafeTensor",
+			"scale": 1,
+			"trigger_words": "S3LFI3"
 		}
 	],
 	"FLUX_Our_Loras": [
@@ -182,6 +205,18 @@
 			"path": "https://storage.googleapis.com/fal-flux-lora/d5ab4985be3a4e3a9aa6381518323fa5_pytorch_lora_weights.safetensors",
 			"scale": 1,
 			"trigger_words": "Léa"
+		},
+		{
+			"name": "camie",
+			"path": "https://v3.fal.media/files/koala/AgBWCYeW-mqbxWZeX5w1b_pytorch_lora_weights.safetensors",
+			"scale": 1,
+			"trigger_words": "camie"
+		},
+		{
+			"name": "astrid",
+			"path": "https://v3.fal.media/files/tiger/6yX6-fw78edp0y32ZYEIF_pytorch_lora_weights.safetensors",
+			"scale": 1,
+			"trigger_words": "astrid"
 		}
 	]
 }
