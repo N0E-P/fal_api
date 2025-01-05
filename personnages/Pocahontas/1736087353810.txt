@@ -1,0 +1,45 @@
+{
+	"images": [
+		{
+			"url": "https://fal.media/files/elephant/wIHdBKQiN_SHs4ixdYTKD_aa1e96b0780e453b89d757dfd4d21b0d.png",
+			"width": 576,
+			"height": 1024,
+			"content_type": "image/png"
+		}
+	],
+	"timings": {
+		"inference": 7.363652118016034
+	},
+	"seed": 8881018087116069000,
+	"has_nsfw_concepts": [
+		false
+	],
+	"prompt": "naked pocahontas, Disney style, wide naked hips, busty naked breasts, Cinematic,  full body naked view from side, lying against a wall, ahegao face, beautiful quality, smooth naked skin, pointy nipples, perfect, clean, detailed"
+}
+
+{
+	"prompt": "naked pocahontas, Disney style, wide naked hips, busty naked breasts, Cinematic,  full body naked view from side, lying against a wall, ahegao face, beautiful quality, smooth naked skin, pointy nipples, perfect, clean, detailed",
+	"loras": [
+		{
+			"name": "Pocahontas",
+			"path": "https://civitai.com/api/download/models/799008?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/714468/zavys-pocahontas-disney-flux",
+			"trigger_words": "pocahontas, casual pocahontas, princess pocahontas, disney style",
+			"notes": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Flux Improved Female Nudity",
+			"path": "https://civitai.com/api/download/models/725939?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/643366/flux-improved-female-nudity",
+			"notes": "Recommend to use Dev with strength 1.0-2.0"
+		}
+	],
+	"image_size": "portrait_16_9",
+	"num_inference_steps": 28,
+	"guidance_scale": 3.5,
+	"num_images": 1,
+	"enable_safety_checker": false,
+	"output_format": "png"
+}

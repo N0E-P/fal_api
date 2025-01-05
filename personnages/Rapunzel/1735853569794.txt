@@ -1,0 +1,18 @@
+{
+	"images": [
+		{
+			"url": "https://fal.media/files/zebra/K5lWXD_AD6-I5bVUqrsZi_cebbe0faddf940718bd6cb3c648946b7.png",
+			"width": 576,
+			"height": 1024,
+			"content_type": "image/png"
+		}
+	],
+	"timings": {
+		"inference": 4.858056123368442
+	},
+	"seed": 14225416780530393000,
+	"has_nsfw_concepts": [
+		false
+	],
+	"prompt": "princess Rapunzel naked, ultra long hair, naked face view, disney style, huge breasts, nipples, at a balcony, looking at the viewer, with a big smile, wearing a crown, pussy visible"
+}

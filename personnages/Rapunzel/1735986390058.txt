@@ -1,0 +1,18 @@
+{
+	"images": [
+		{
+			"url": "https://fal.media/files/lion/o27WeiT4FyGfyBV2NYf3M_1cfd1963cdbd4d5ebb95d735c2322687.png",
+			"content_type": "image/png",
+			"file_name": "1cfd1963cdbd4d5ebb95d735c2322687.png",
+			"file_size": 835905,
+			"width": 576,
+			"height": 1024
+		}
+	],
+	"seed": 2113243755283756000,
+	"has_nsfw_concepts": [
+		false
+	],
+	"debug_latents": null,
+	"debug_per_pass_latents": null
+}

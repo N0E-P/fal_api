@@ -1,0 +1,44 @@
+{
+	"images": [
+		{
+			"url": "https://fal.media/files/koala/kICIQaswWYC_iQYJ5Do0Z_36c48be4e97e4f2482ac4aee681be94f.png",
+			"width": 576,
+			"height": 1024,
+			"content_type": "image/png"
+		}
+	],
+	"timings": {
+		"inference": 6.739359703147784
+	},
+	"seed": 18306086652431913000,
+	"has_nsfw_concepts": [
+		false
+	],
+	"prompt": "naked disney princess rapunzel,wide naked hips, busty breast, DisneyStudio, Cartoon, Cinematic, naked full body view from top, smiling, disney style, long hair, top view, beautiful quality, smooth naked skin, laying on bed naked , arms and legs spread,huge naked breasts, pussy, anus, spread legs, fully naked, nipples, perfect, clean, two legs, sex"
+}
+
+{
+	"prompt": "naked disney princess rapunzel,wide naked hips, busty breast, DisneyStudio, Cartoon, Cinematic, naked full body view from top, smiling, disney style, long hair, top view, beautiful quality, smooth naked skin, laying on bed naked , arms and legs spread,huge naked breasts, pussy, anus, spread legs, fully naked, nipples, perfect, clean, two legs, sex",
+	"loras": [
+		{
+			"name": "Rapunzel",
+			"path": "https://civitai.com/api/download/models/799036?type=Model&format=SafeTensor",
+			"scale": 1,
+			"trigger_words": "rapunzel, princess rapunzel, casual rapunzel, short hair rapunzel, long hair rapunzel, disney style",
+			"note": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Disney Studio",
+			"path": "https://civitai.com/api/download/models/738866?type=Model&format=SafeTensor",
+			"scale": 0.5,
+			"link": "https://civitai.com/models/404277/definitive-disney-studios-style-pony-and-flux-by-yeiyeiart",
+			"trigger_words": "DisneyStudio, Cartoon, Cinematic"
+		}
+	],
+	"image_size": "portrait_16_9",
+	"num_inference_steps": 28,
+	"guidance_scale": 3.5,
+	"num_images": 1,
+	"enable_safety_checker": false,
+	"output_format": "png"
+}

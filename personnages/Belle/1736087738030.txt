@@ -1,0 +1,45 @@
+{
+	"images": [
+		{
+			"url": "https://fal.media/files/monkey/NTNu7re6Si7XYL-5XNaaA_4a78834747c24fbeb3a058eca4df643f.png",
+			"width": 576,
+			"height": 1024,
+			"content_type": "image/png"
+		}
+	],
+	"timings": {
+		"inference": 7.516972055193037
+	},
+	"seed": 560312533155015230,
+	"has_nsfw_concepts": [
+		false
+	],
+	"prompt": "naked belle, Disney style, wide naked hips, busty naked breasts, Cinematic,  full body naked view from side, lying against a wall, beautiful quality, smooth naked skin, pointy nipples, perfect, clean, detailed"
+}
+
+{
+	"prompt": "naked belle, Disney style, wide naked hips, busty naked breasts, Cinematic,  full body naked view from side, lying against a wall, beautiful quality, smooth naked skin, pointy nipples, perfect, clean, detailed",
+	"loras": [
+		{
+			"name": "Belle",
+			"path": "https://civitai.com/api/download/models/901384?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/806162/zavys-belle-disney-flux",
+			"trigger_words": "belle, casual belle, princess belle in yellow dress, disney style",
+			"notes": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Flux Improved Female Nudity",
+			"path": "https://civitai.com/api/download/models/725939?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/643366/flux-improved-female-nudity",
+			"notes": "Recommend to use Dev with strength 1.0-2.0"
+		}
+	],
+	"image_size": "portrait_16_9",
+	"num_inference_steps": 28,
+	"guidance_scale": 3.5,
+	"num_images": 1,
+	"enable_safety_checker": false,
+	"output_format": "png"
+}

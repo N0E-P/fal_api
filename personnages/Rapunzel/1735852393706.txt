@@ -1,0 +1,18 @@
+{
+	"images": [
+		{
+			"url": "https://fal.media/files/lion/5PA5iKne9JsyzUiSr1JCx_93b1c52c08354bb680184be500548883.png",
+			"width": 576,
+			"height": 1024,
+			"content_type": "image/png"
+		}
+	],
+	"timings": {
+		"inference": 6.408914146013558
+	},
+	"seed": 1642454150596540200,
+	"has_nsfw_concepts": [
+		false
+	],
+	"prompt": "naked cartoon princess Rapunzel, pussy selfie ultra long hair, round ass, on her bed"
+}

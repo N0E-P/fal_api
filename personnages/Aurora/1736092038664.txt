@@ -1,0 +1,45 @@
+{
+	"images": [
+		{
+			"url": "https://fal.media/files/monkey/wiurODpJf1DURWs8mKsZk_c1fc2740aafa45f3809444ff44258d09.png",
+			"width": 576,
+			"height": 1024,
+			"content_type": "image/png"
+		}
+	],
+	"timings": {
+		"inference": 4.730682363733649
+	},
+	"seed": 16457426055391207000,
+	"has_nsfw_concepts": [
+		false
+	],
+	"prompt": "naked Aurora, Disney style, huge naked breasts, Cinematic,  full naked body,  naked view from front, at the beach, leaving the sea, beautiful quality, smooth naked skin, pointy nipples, perfect, clean, detailed"
+}
+
+{
+	"prompt": "naked Aurora, Disney style, huge naked breasts, Cinematic,  full naked body,  naked view from front, at the beach, leaving the sea, beautiful quality, smooth naked skin, pointy nipples, perfect, clean, detailed",
+	"loras": [
+		{
+			"name": "Aurora",
+			"path": "https://civitai.com/api/download/models/901376?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/806151/zavys-aurora-disney-flux",
+			"trigger_words": "aurora, briar rose, casual aurora, princess aurora in pink dress, disney style",
+			"notes": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Flux Improved Female Nudity",
+			"path": "https://civitai.com/api/download/models/725939?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/643366/flux-improved-female-nudity",
+			"notes": "Recommend to use Dev with strength 1.0-2.0"
+		}
+	],
+	"image_size": "portrait_16_9",
+	"num_inference_steps": 28,
+	"guidance_scale": 3.5,
+	"num_images": 1,
+	"enable_safety_checker": false,
+	"output_format": "png"
+}
