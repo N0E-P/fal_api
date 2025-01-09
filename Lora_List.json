@@ -138,6 +138,14 @@
 			"scale": 0.7,
 			"link": "https://civitai.com/models/131822/perfect-round-ass-sd15sdxlflux-or-olaz?modelVersionId=1041921",
 			"trigger_words": "round ass, This is a photograph of a young woman captured from behind., This is a photograph of a young woman captured from the side., She has a round ass."
+		},
+		{
+			"name": "Perfect Full Round Breasts & Slim Waist",
+			"path": "https://civitai.com/api/download/models/721167?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/61099?modelVersionId=721167",
+			"trigger_words": "busty breasts, nipples, anime, anime style, massively huge breasts",
+			"notes": "I recommend to use [0.6-1.0] weights."
 		}
 	],
 	"FLUX_Real_Style": [

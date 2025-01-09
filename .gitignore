@@ -1,4 +1,5 @@
-/config.json
 /node_modules
-/output
+/config.json
+
 /notes.json
+/a-trier
