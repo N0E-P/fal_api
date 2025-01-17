@@ -17,31 +17,31 @@ More details to fill these files can be found below.
 ## 4. Run the code
 
 ```bash
-npm run start -- image-flux
+node index.js image-flux
 ```
 
 OR
 
 ```bash
-npm run start -- image-sd
+node index.js image-sd
 ```
 
 OR
 
 ```bash
-npm run start -- image-sdxl
+node index.js image-sdxl
 ```
 
 OR
 
 ```bash
-npm run start -- image-huggingface
+node index.js image-huggingface
 ```
 
 OR
 
 ```bash
-npm run start -- video-kling
+node index.js video-kling
 ```
 
 ---

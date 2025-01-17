@@ -9,122 +9,7 @@
 			"notes": ""
 		}
 	],
-	"SDXL": [
-		{
-			"name": "Disney princess",
-			"path": "https://civitai.com/api/download/models/244808?type=Model&format=SafeTensor",
-			"scale": 0.5,
-			"link": "https://civitai.com/models/212532?modelVersionId=244808",
-			"trigger_words": "",
-			"notes": "Optimal LoRA scales range between 0.6-0.7 for close-up character generation and 0.3-0.5 for full-body generation."
-		}
-	],
-	"FLUX_Personnages": [
-		{
-			"name": "Rapunzel",
-			"path": "https://civitai.com/api/download/models/799036?type=Model&format=SafeTensor",
-			"scale": 1,
-			"link": "https://civitai.com/models/714493/zavys-rapunzel-disney-flux",
-			"trigger_words": "rapunzel, princess rapunzel, casual rapunzel, short hair rapunzel, long hair rapunzel, disney style",
-			"notes": "Strength between 0.7 and 1.3."
-		},
-		{
-			"name": "Anna",
-			"path": "https://civitai.com/api/download/models/798766?type=Model&format=SafeTensor",
-			"scale": 1,
-			"link": "https://civitai.com/models/714241/zavys-anna-disney-flux",
-			"trigger_words": "anna, casual anna, princess anna, anna in autumn outfit, disney style",
-			"notes": "Strength between 0.7 and 1.3."
-		},
-		{
-			"name": "Moana",
-			"path": "https://civitai.com/api/download/models/798963?type=Model&format=SafeTensor",
-			"scale": 1,
-			"link": "https://civitai.com/models/714429?modelVersionId=798963",
-			"trigger_words": "moana, casual moana, princess moana, disney style",
-			"notes": "Strength between 0.7 and 1.3."
-		},
-		{
-			"name": "Pocahontas",
-			"path": "https://civitai.com/api/download/models/799008?type=Model&format=SafeTensor",
-			"scale": 1,
-			"link": "https://civitai.com/models/714468/zavys-pocahontas-disney-flux",
-			"trigger_words": "pocahontas, casual pocahontas, princess pocahontas, disney style",
-			"notes": "Strength between 0.7 and 1.3."
-		},
-		{
-			"name": "Belle",
-			"path": "https://civitai.com/api/download/models/901384?type=Model&format=SafeTensor",
-			"scale": 1,
-			"link": "https://civitai.com/models/806162/zavys-belle-disney-flux",
-			"trigger_words": "belle, casual belle, princess belle in yellow dress, disney style",
-			"notes": "Strength between 0.7 and 1.3."
-		},
-		{
-			"name": "Elsa",
-			"path": "https://civitai.com/api/download/models/798908?type=Model&format=SafeTensor",
-			"scale": 1,
-			"link": "https://civitai.com/models/714384/zavys-elsa-disney-flux",
-			"trigger_words": "elsa, casual elsa, princess elsa, queen elsa, snow queen, disney style",
-			"notes": "Strength between 0.7 and 1.3."
-		},
-		{
-			"name": "Aurora",
-			"path": "https://civitai.com/api/download/models/901376?type=Model&format=SafeTensor",
-			"scale": 1,
-			"link": "https://civitai.com/models/806151/zavys-aurora-disney-flux",
-			"trigger_words": "aurora, briar rose, casual aurora, princess aurora in pink dress, disney style",
-			"notes": "Strength between 0.7 and 1.3."
-		},
-		{
-			"name": "Snow White",
-			"path": "https://civitai.com/api/download/models/799059?type=Model&format=SafeTensor",
-			"scale": 1,
-			"link": "https://civitai.com/models/714515/zavys-snow-white-disney-flux",
-			"trigger_words": "snow white, casual snow white, princess snow white, disney style",
-			"notes": "Strength between 0.7 and 1.3."
-		},
-		{
-			"name": "Mulan",
-			"path": "https://civitai.com/api/download/models/798991?type=Model&format=SafeTensor",
-			"scale": 1,
-			"link": "https://civitai.com/models/714452/zavys-mulan-disney-flux",
-			"trigger_words": "mulan, casual mulan, mulan in hanfu, mulan in red jacket, disney style",
-			"notes": "Strength between 0.7 and 1.3."
-		},
-		{
-			"name": "Merida",
-			"path": "https://civitai.com/api/download/models/798940?type=Model&format=SafeTensor",
-			"scale": 1,
-			"link": "https://civitai.com/models/714410/zavys-merida-disney-pixar-flux",
-			"trigger_words": "merida, casual merida, princess merida, merida from brave, queen elinor from brave, disney style",
-			"notes": "Strength between 0.7 and 1.3."
-		},
-		{
-			"name": "Cinderella",
-			"path": "https://civitai.com/api/download/models/798861?type=Model&format=SafeTensor",
-			"scale": 1,
-			"link": "https://civitai.com/models/714325/zavys-cinderella-disney-flux",
-			"trigger_words": "cinderella, casual cinderella, princess cinderella in dress, disney style",
-			"notes": "Strength between 0.7 and 1.3."
-		},
-		{
-			"name": "Ariel",
-			"path": "https://civitai.com/api/download/models/798810?type=Model&format=SafeTensor",
-			"scale": 1,
-			"link": "https://civitai.com/models/714284/zavys-ariel-disney-flux",
-			"trigger_words": "",
-			"notes": "Strength between 0.7 and 1.3."
-		}
-	],
-	"FLUX_Cartoon_Style": [
-		{
-			"name": "Disney Studio",
-			"path": "https://civitai.com/api/download/models/738866?type=Model&format=SafeTensor",
-			"scale": 0.5,
-			"link": "https://civitai.com/models/404277/definitive-disney-studios-style-pony-and-flux-by-yeiyeiart",
-			"trigger_words": "DisneyStudio, Cartoon, Cinematic"
-		},
+	"FLUX_Cartoon_Anime_Style": [
 		{
 			"name": "Flux Improved Female Nudity",
 			"path": "https://civitai.com/api/download/models/725939?type=Model&format=SafeTensor",
@@ -137,15 +22,137 @@
 			"path": "https://civitai.com/api/download/models/1041921?type=Model&format=SafeTensor",
 			"scale": 0.7,
 			"link": "https://civitai.com/models/131822/perfect-round-ass-sd15sdxlflux-or-olaz?modelVersionId=1041921",
-			"trigger_words": "round ass, This is a photograph of a young woman captured from behind., This is a photograph of a young woman captured from the side., She has a round ass."
+			"trigger_words": "round ass, This is a photograph of a young woman captured from behind., This is a photograph of a young woman captured from the side., She has a round ass.",
+			"image_prompt": "back view of [...Name...] [...Doing Something..], Disney style, Cinematic, huge round ass, She has a round ass., [...color...] skirt, [...color...] bra, [...background...] background, beautiful quality, clean, detailed",
+			"video_prompt": "twerk, twerking"
 		},
 		{
 			"name": "Perfect Full Round Breasts & Slim Waist",
 			"path": "https://civitai.com/api/download/models/721167?type=Model&format=SafeTensor",
-			"scale": 1,
+			"scale": 0.5,
 			"link": "https://civitai.com/models/61099?modelVersionId=721167",
 			"trigger_words": "busty breasts, nipples, anime, anime style, massively huge breasts",
-			"notes": "I recommend to use [0.6-1.0] weights."
+			"notes": "I recommend to use [0.6-1.0] weights.",
+			"image_prompt": "front view of [...Name...] [...Doing Something..], Disney style, Cinematic, massively huge breasts neckline, [...color...] crop top, busty breasts neckline, [...background...] background, beautiful quality, clean, detailed",
+			"video_prompt": "happy, danse, bouncing breasts, shaking boobs"
+		}
+	],
+	"FLUX_Personnages": [
+		{
+			"name": "Lola Bunny",
+			"path": "https://civitai.com/api/download/models/945118?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/844775/lola-bunny-flux",
+			"trigger_words": "lola bunny"
+		},
+		{
+			"name": "LadyBug - Miraculous",
+			"path": "https://civitai.com/api/download/models/1076685?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/910061/ladybug",
+			"trigger_words": "Ladybug, Blue hair, Blue eyes, Red with dots, Domino mask"
+		},
+		{
+			"name": "Nami - One Piece",
+			"path": "https://civitai.com/api/download/models/914758?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/818053/nami-one-piece-anime-flux-ethanar"
+		},
+		{
+			"name": "Rapunzel - Disney",
+			"path": "https://civitai.com/api/download/models/799036?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/714493/zavys-rapunzel-disney-flux",
+			"trigger_words": "rapunzel, princess rapunzel, casual rapunzel, short hair rapunzel, long hair rapunzel, disney style",
+			"notes": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Anna - Disney",
+			"path": "https://civitai.com/api/download/models/798766?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/714241/zavys-anna-disney-flux",
+			"trigger_words": "anna, casual anna, princess anna, anna in autumn outfit, disney style",
+			"notes": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Moana - Disney",
+			"path": "https://civitai.com/api/download/models/798963?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/714429?modelVersionId=798963",
+			"trigger_words": "moana, casual moana, princess moana, disney style",
+			"notes": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Pocahontas - Disney",
+			"path": "https://civitai.com/api/download/models/799008?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/714468/zavys-pocahontas-disney-flux",
+			"trigger_words": "pocahontas, casual pocahontas, princess pocahontas, disney style",
+			"notes": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Belle - Disney",
+			"path": "https://civitai.com/api/download/models/901384?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/806162/zavys-belle-disney-flux",
+			"trigger_words": "belle, casual belle, princess belle in yellow dress, disney style",
+			"notes": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Elsa - Disney",
+			"path": "https://civitai.com/api/download/models/798908?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/714384/zavys-elsa-disney-flux",
+			"trigger_words": "elsa, casual elsa, princess elsa, queen elsa, snow queen, disney style",
+			"notes": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Aurora - Disney",
+			"path": "https://civitai.com/api/download/models/901376?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/806151/zavys-aurora-disney-flux",
+			"trigger_words": "aurora, briar rose, casual aurora, princess aurora in pink dress, disney style",
+			"notes": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Snow White - Disney",
+			"path": "https://civitai.com/api/download/models/799059?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/714515/zavys-snow-white-disney-flux",
+			"trigger_words": "snow white, casual snow white, princess snow white, disney style",
+			"notes": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Mulan - Disney",
+			"path": "https://civitai.com/api/download/models/798991?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/714452/zavys-mulan-disney-flux",
+			"trigger_words": "mulan, casual mulan, mulan in hanfu, mulan in red jacket, disney style",
+			"notes": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Merida - Disney",
+			"path": "https://civitai.com/api/download/models/798940?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/714410/zavys-merida-disney-pixar-flux",
+			"trigger_words": "merida, casual merida, princess merida, merida from brave, queen elinor from brave, disney style",
+			"notes": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Cinderella - Disney",
+			"path": "https://civitai.com/api/download/models/798861?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/714325/zavys-cinderella-disney-flux",
+			"trigger_words": "cinderella, casual cinderella, princess cinderella in dress, disney style",
+			"notes": "Strength between 0.7 and 1.3."
+		},
+		{
+			"name": "Ariel - Disney",
+			"path": "https://civitai.com/api/download/models/798810?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/714284/zavys-ariel-disney-flux",
+			"trigger_words": "",
+			"notes": "Strength between 0.7 and 1.3."
 		}
 	],
 	"FLUX_Real_Style": [
