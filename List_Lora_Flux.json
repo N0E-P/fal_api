@@ -33,11 +33,62 @@
 			"link": "https://civitai.com/models/61099?modelVersionId=721167",
 			"trigger_words": "busty breasts, nipples, anime, anime style, massively huge breasts",
 			"notes": "I recommend to use [0.6-1.0] weights.",
-			"image_prompt": "front view of [...Name...] [...Doing Something..], Disney style, Cinematic, massively huge breasts neckline, [...color...] crop top, busty breasts neckline, [...background...] background, beautiful quality, clean, detailed",
-			"video_prompt": "happy, danse, bouncing breasts, shaking boobs"
+			"image_prompt": "front view of [...Name...] [...Doing Something..], Disney style, Cinematic, [...color...] dress, busty breasts neckline, [...background...] background, beautiful quality, clean, detailed",
+			"video_prompt": "bouncing boobs, dansing, jumping, smiling"
 		}
 	],
 	"FLUX_Personnages": [
+		{
+			"name": "Ranni the Witch - Elden Ring",
+			"path": "https://civitai.com/api/download/models/948461?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/847782/ranni-the-witch-elden-ring-flux1d",
+			"trigger_words": "Ranni, a blue skin woman with extra arms and extra face and witch hat, coat, dress"
+		},
+		{
+			"name": "Neytiri - Avatar",
+			"path": "https://civitai.com/api/download/models/861382?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/122125/neytiri-flux-sdxl",
+			"trigger_words": "Neytiri, blue skin",
+			"notes": "strength 0.75-1.0 depending on use case"
+		},
+		{
+			"name": "Princess Jasmine",
+			"path": "https://civitai.com/api/download/models/834714?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/746445/princess-jasmine-flux",
+			"trigger_words": "Jasmine",
+			"notes": "strength 0.6-1 look amazing .6-.8 might be preferable depending on the task"
+		},
+		{
+			"name": "Alice in Wonderland",
+			"path": "https://civitai.com/api/download/models/799016?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/707955/alice-in-wonderland-flux",
+			"trigger_words": "@l1c3"
+		},
+		{
+			"name": "Tinkerbell",
+			"path": "https://civitai.com/api/download/models/833850?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/745670/tinkerbell-flux1d",
+			"trigger_words": "Tinkerbell is a woman"
+		},
+		{
+			"name": "Asari - Mass Effect",
+			"path": "https://civitai.com/api/download/models/871352?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/779122/asari-mass-effect-fluxd",
+			"trigger_words": "blue female asari"
+		},
+		{
+			"name": "Lady Deadpool",
+			"path": "https://civitai.com/api/download/models/847791?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/586460/lady-deadpool-flux1d-and-sdxl-realistic-and-comics",
+			"trigger_words": "Lady Deadpool, mask, blond ponytail, white eyes"
+		},
 		{
 			"name": "Lola Bunny",
 			"path": "https://civitai.com/api/download/models/945118?type=Model&format=SafeTensor",

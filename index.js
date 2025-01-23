@@ -100,5 +100,5 @@ else if (args === "image-sd") request("fal-ai/lora", "input_image-sd.json");
 else if (args === "image-sdxl") request("fal-ai/lora", "input_image-sdxl.json");
 else if (args === "image-huggingface") request("fal-ai/lora", "input_image-huggingface.json");
 else if (args === "video-kling")
-	request("fal-ai/kling-video/v1.5/pro/image-to-video", "input_video-kling.json");
+	request("fal-ai/kling-video/v1.6/pro/image-to-video", "input_video-kling.json");
 else console.error("Invalid arguments, read the fucking README.md file.");
