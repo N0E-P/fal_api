@@ -23,7 +23,7 @@
 			"scale": 0.7,
 			"link": "https://civitai.com/models/131822/perfect-round-ass-sd15sdxlflux-or-olaz?modelVersionId=1041921",
 			"trigger_words": "round ass, This is a photograph of a young woman captured from behind., This is a photograph of a young woman captured from the side., She has a round ass.",
-			"image_prompt": "back view of [...Name...] [...Doing Something..], Disney style, Cinematic, huge round ass, She has a round ass., [...color...] skirt, [...color...] bra, [...background...] background, beautiful quality, clean, detailed",
+			"image_prompt": "Disney style, Cinematic, back view of [...Name...] [...Doing Something..], [...clothes...] , [...background...] background, huge round ass, She has a round ass., beautiful quality, clean, detailed",
 			"video_prompt": "twerk, twerking"
 		},
 		{
@@ -33,11 +33,90 @@
 			"link": "https://civitai.com/models/61099?modelVersionId=721167",
 			"trigger_words": "busty breasts, nipples, anime, anime style, massively huge breasts",
 			"notes": "I recommend to use [0.6-1.0] weights.",
-			"image_prompt": "front view of [...Name...] [...Doing Something..], Disney style, Cinematic, [...color...] dress, busty breasts neckline, [...background...] background, beautiful quality, clean, detailed",
+			"image_prompt": "Disney style, Cinematic, front view of [...Name...] [...Doing Something..], [...clothes...] , [...background...] background, busty breasts neckline, massively huge breasts, beautiful quality, clean, detailed",
 			"video_prompt": "bouncing boobs, dansing, jumping, smiling"
 		}
 	],
 	"FLUX_Personnages": [
+		{
+			"name": "Elastigirl - The Incredibles",
+			"path": "https://civitai.com/api/download/models/804992?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/507518/elastigirl-the-incredibles-flux1d-and-sdxl-realistic-and-more",
+			"trigger_words": "Helen Parr wears a mask, grey superhero bodysuit, red superhero bodysuit",
+			"notes": "should include -Elastigirl from The Incredibles- in the prompt"
+		},
+		{
+			"name": "Aunt Cass - Big Hero 6",
+			"path": "https://civitai.com/api/download/models/1066956?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/949967/aunt-cass-big-hero-6-flux",
+			"trigger_words": "aunt cass, a high resolution disney animated render of"
+		},
+		{
+			"name": "Romin Kassidy - Yu-Gi-Oh",
+			"path": "https://civitai.com/api/download/models/738675?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/460557/kirishima-romin-fluxpony-xl-anime-faithful",
+			"trigger_words": "Romin"
+		},
+		{
+			"name": "Smurfette - The Smurfs",
+			"path": "https://civitai.com/api/download/models/999348?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/265654/the-smurfs-flux1d-and-sdxl",
+			"trigger_words": "Smurf, female smurf, Smurfette"
+		},
+		{
+			"name": "Daphne Blake - Scooby-Doo",
+			"path": "https://civitai.com/api/download/models/859346?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/397155/daphne-blake-scooby-doo-franchise-flux1d-sdxl-realistic-anime",
+			"trigger_words": "Daphne Blake, headband, purple dress, green scarf"
+		},
+		{
+			"name": "Velma Dinkley - Scooby Doo",
+			"path": "https://civitai.com/api/download/models/842632?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/753550/velma-dinkley-scooby-doo-flux1d",
+			"trigger_words": "Velma"
+		},
+		{
+			"name": "Lara Croft",
+			"path": "https://civitai.com/api/download/models/770525?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/688452/laracroftfluxlora",
+			"trigger_words": "LaraCroft",
+			"notes": "The model works very well in strength 1.0. But for example to make the most realistic version, I put -fujifilm Raw photography- in my prompt, set the strength to 0.8 and also used the flux_realism model at 0.5."
+		},
+		{
+			"name": "Harley Quinn",
+			"path": "https://civitai.com/api/download/models/728019?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/650720/harleyquinn-suicide-squad-2016-flux-lora",
+			"notes": "use Harley Quinn as a trigger word"
+		},
+		{
+			"name": "Jessica Rabbit",
+			"path": "https://civitai.com/api/download/models/763004?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/681699/iconic-jessica-rabbit",
+			"trigger_words": "jessica rabbit, hair covering one eye"
+		},
+		{
+			"name": "Princess Zelda",
+			"path": "https://civitai.com/api/download/models/764407?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/682944/princess-zelda-flux-or-dogmaai",
+			"trigger_words": "Princess Zelda, DGMA Style"
+		},
+		{
+			"name": "Gwen Stacy - Spiderman",
+			"path": "https://civitai.com/api/download/models/1119490?type=Model&format=SafeTensor",
+			"scale": 1,
+			"link": "https://civitai.com/models/998964/gwen-stacy-flux",
+			"trigger_words": "gwen_stacy"
+		},
 		{
 			"name": "Ranni the Witch - Elden Ring",
 			"path": "https://civitai.com/api/download/models/948461?type=Model&format=SafeTensor",
