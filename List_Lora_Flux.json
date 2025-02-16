@@ -13,7 +13,7 @@
 		{
 			"name": "Flux Improved Female Nudity",
 			"path": "https://civitai.com/api/download/models/725939?type=Model&format=SafeTensor",
-			"scale": 1,
+			"scale": 0.8,
 			"link": "https://civitai.com/models/643366/flux-improved-female-nudity",
 			"notes": "Recommend to use Dev with strength 1.0-2.0"
 		},
@@ -33,7 +33,7 @@
 			"link": "https://civitai.com/models/61099?modelVersionId=721167",
 			"trigger_words": "busty breasts, nipples, anime, anime style, massively huge breasts",
 			"notes": "I recommend to use [0.6-1.0] weights.",
-			"image_prompt": "Disney style, Cinematic, front view of [...Name...] [...Doing Something..], [...clothes...] , [...background...] background, busty breasts neckline, massively huge breasts, beautiful quality, clean, detailed",
+			"image_prompt": "very far away view, [...Franchise...] style, Cinematic, front view of [...Name...] [...Doing Something..], [...facial expression...], [...clothes...] , [...background...] background, busty breasts neckline, massively huge breasts, beautiful quality, clean, detailed",
 			"video_prompt": "bouncing boobs, dansing, jumping, smiling"
 		}
 	],
@@ -146,13 +146,6 @@
 			"scale": 1,
 			"link": "https://civitai.com/models/707955/alice-in-wonderland-flux",
 			"trigger_words": "@l1c3"
-		},
-		{
-			"name": "Tinkerbell",
-			"path": "https://civitai.com/api/download/models/833850?type=Model&format=SafeTensor",
-			"scale": 1,
-			"link": "https://civitai.com/models/745670/tinkerbell-flux1d",
-			"trigger_words": "Tinkerbell is a woman"
 		},
 		{
 			"name": "Asari - Mass Effect",
@@ -281,7 +274,7 @@
 			"path": "https://civitai.com/api/download/models/798810?type=Model&format=SafeTensor",
 			"scale": 1,
 			"link": "https://civitai.com/models/714284/zavys-ariel-disney-flux",
-			"trigger_words": "",
+			"trigger_words": "ariel, casual ariel, princess ariel in pink dress, disney style",
 			"notes": "Strength between 0.7 and 1.3."
 		}
 	],

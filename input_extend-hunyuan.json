@@ -1,0 +1,9 @@
+{
+	"prompt": "",
+	"video_url": "",
+	"aspect_ratio": "16:9",
+	"resolution": "720p",
+	"num_frames": 129,
+	"enable_safety_checker": false,
+	"strength": 0.85
+}

@@ -101,4 +101,16 @@ else if (args === "image-sdxl") request("fal-ai/lora", "input_image-sdxl.json");
 else if (args === "image-huggingface") request("fal-ai/lora", "input_image-huggingface.json");
 else if (args === "video-kling")
 	request("fal-ai/kling-video/v1.6/pro/image-to-video", "input_video-kling.json");
+else if (args === "video-luma")
+	request("fal-ai/luma-dream-machine/image-to-video", "input_video-luma.json");
+else if (args === "video-haiper")
+	request("fal-ai/haiper-video/v2/image-to-video", "input_video-haiper.json");
+else if (args === "video-minimax")
+	request("fal-ai/minimax/video-01/image-to-video", "input_video-minimax.json");
+else if (args === "video-pixverse")
+	request("fal-ai/pixverse/v3.5/image-to-video", "input_video-pixverse.json");
+else if (args === "video-hunyuan")
+	request("fal-ai/hunyuan-video-img2vid-lora", "input_video-hunyuan.json");
+else if (args === "extend-hunyuan")
+	request("fal-ai/hunyuan-video-lora/video-to-video", "input_extend-hunyuan.json");
 else console.error("Invalid arguments, read the fucking README.md file.");

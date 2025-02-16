@@ -1,0 +1,8 @@
+{
+	"prompt": "",
+	"image_url": "",
+	"aspect_ratio": "9:16",
+	"resolution": "720p",
+	"duration": 8,
+	"negative_prompt": "blurry, low quality, low resolution, pixelated, noisy, grainy, out of focus, poorly lit, poorly exposed, poorly composed, poorly framed, poorly cropped, poorly color corrected, poorly color graded"
+}
